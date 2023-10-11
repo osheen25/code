@@ -1,0 +1,240 @@
+<!-- Html code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Survey Form </title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2> Survey Form </h2>
+        <div class="form-wrapper">
+            <form action="">
+                <div class="form-group">
+                    <label for="name"> Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lname"> Last Name: </label>
+                    <input type="text" name="lname" id="lname" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"> Email: </label>
+                    <input type="text" name="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone No:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group dob">
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday" required>
+                </div>
+                <div class="form-group gender">
+                    Gender:
+                    <div class="genderDiv" id="myCheck">
+                        <input type="radio" name="gender" id="male"><label for="gender"> Male </label>
+                        <input type="radio" name="gender" id="female"><label for="gender"> Female </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="profession">Profession</label>
+                    <input type="text" id="profession" name="profession" placeholder="Enter your profession" required>
+                </div>
+                <div class="form-group">
+                    <label for="country" id="country">Country</label>
+                    <select>
+                        <option class="transparent" value="america"> America</option>
+                        <option class="transparent" value="australia">Australia </option>
+                        <option class="transparent" value="china">China </option>
+                        <option class="transparent" value="india">India </option>
+                        <option class="transparent" value="pakistan">Pakistan </option>
+                    </select>
+                </div>
+                
+                <button type="submit"> Submit </button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<--! Css Code -->
+* {
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+}
+
+.container {
+text-align: center;
+color: #0a0101;
+width: 100%;
+padding: 5rem 0;
+background-color: #e65b00;
+background-size: cover;
+display: grid;
+align-content: center;
+}
+
+.container h2 {
+margin-bottom: 20px;
+}
+
+.form-wrapper {
+margin: 0 auto;
+width: 60%;
+overflow: hidden;
+background: transparent;
+border: 1px solid #000;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(14, 1, 1, 0.182);
+padding: 10px;
+}
+
+.form-group {
+display: flex;
+padding: 5px;
+text-align: left;
+margin: 4px 0;
+}
+
+.form-group label {
+font-weight: 400;
+}
+
+.form-group input,
+option {
+font-weight: 200;
+}
+
+.form-group input {
+background-color: transparent;
+border-radius: 5px;
+margin-left: 10px;
+color:black;
+width: 400px;
+padding: 5px;
+border: 1px solid rgba(255, 255, 255, 0.803);
+outline: rgb(17, 11, 1);
+}
+
+.form-group input[type="radio"] {
+width: 15px;
+margin-right: 10px;
+}
+
+.form-group label[for="name"],
+.form-group label[for="email"] {
+width: 50px;
+margin-right: 10px;
+}
+
+.box input {
+width: auto;
+}
+
+#hear {
+margin-right: 10px;
+}
+
+.form-group select {
+outline: none;
+border: 1px solid #fff;
+cursor: pointer;
+border-radius: 20px;
+border-radius: 5px;
+cursor: pointer;
+
+padding: 5px;
+background-color: transparent;
+color: black;
+}
+
+.form-group select option {
+background-color: #e65b00;
+color: #000;
+}
+
+.flex {
+display: flex;
+flex-direction: column;
+}
+
+textarea {
+width: 90%;
+resize: none;
+background: transparent;
+border-radius: 6px;
+color: black;
+padding: 10px;
+}
+
+button {
+width: 60%;
+padding: 6px;
+border-radius: 7px;
+border: none;
+outline: none;
+background-color: transparent;
+border: 1px solid #fff;
+transition: all 0.2s;
+color: black;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #e65b00;
+border-color: #e65b00;
+}
+
+@media screen and (max-width: 839px) {
+.container {
+    padding: 1rem;
+}
+
+.form-wrapper {
+    width: 100%;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 80%;
+}
+
+.form-group {
+    flex-direction: column;
+}
+
+.form-group select {
+    width: 40%;
+    border-radius: 5px;
+    cursor: pointer;
+
+    padding: 5px;
+    background-color: transparent;
+    color: #0a0000;
+}
+
+.form-group select option {
+    width: 40%;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    background-color: #e65b00;
+    color:black;
+    border-radius: 5px;
+}
+
+.gender {
+    display: flex;
+}
+}
+
